@@ -7,7 +7,7 @@ module JqueryTmplRails
 
     initializer "sprockets.jquery_templates", :after => "sprockets.environment", :group => :all do |app|
       next unless app.assets
-      app.assets.register_engine(".tmpl", JqueryTemplate), silence_deprecation: true
+      app.assets.register_engine(".tmpl", JqueryTemplate, silence_deprecation: true)
     end
   end
 end
